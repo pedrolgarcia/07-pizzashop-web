@@ -50,6 +50,12 @@
   }
 }
 
+.toast-action-button {
+  background: var(--success-text) !important;
+  border-color: var(--success-border) !important;
+  color: var(--success-bg) !important;
+}
+
 @layer base {
   * {
     @apply border-border;
