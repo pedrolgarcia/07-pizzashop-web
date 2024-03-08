@@ -9,7 +9,7 @@ import { Button } from './ui/button'
 
 interface PaginationProps {
   pageIndex: number
-  totalPages: number
+  totalCount: number
   perPage: number
   onPageChange: (pageIndex: number) => Promise<void> | void
 }
@@ -17,15 +17,15 @@ interface PaginationProps {
 export function Pagination({
   pageIndex,
   perPage,
-  totalPages,
+  totalCount,
   onPageChange,
 }: PaginationProps) {
-  const pages = Math.ceil(totalPages / perPage) || 1
+  const pages = Math.ceil(totalCount / perPage) || 1
 
   return (
     <div className="flex items-center justify-between">
       <span className="text-sm text-muted-foreground">
-        Total de {totalPages} item(s)
+        Total de {totalCount} item(s)
       </span>
 
       <div className="flex items-center gap-6 lg:gap-8">
